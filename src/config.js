@@ -1,4 +1,5 @@
 const baseUrl = 'http://api.leyou.com'
+// const baseUrl = 'http://127.0.0.1'
 const config = {
   locale: 'zh-CN', // en-US, zh-CN
   url: baseUrl,

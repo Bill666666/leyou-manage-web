@@ -22,7 +22,7 @@ var menus = [
     path:"/user",
     items: [
       { title: "会员统计", path: "/statistics" },
-      { title: "会员管理", path: "/list" }
+      { title: "会员管理", path: "/management" }
     ]
   },
   {
@@ -30,7 +30,7 @@ var menus = [
     title: "销售管理",
     path:"/trade",
     items: [
-      { title: "交易统计", path: "/statistics" },
+      { title: "交易统计", path: "/trade" },
       { title: "订单管理", path: "/order" },
       { title: "物流管理", path: "/logistics" },
       { title: "促销管理", path: "/promotion" }
@@ -39,9 +39,9 @@ var menus = [
   {
     action: "settings",
     title: "权限管理",
-    path:"/authority",
+    path:"/auth",
     items: [
-      { title: "权限管理", path: "/list" },
+      { title: "权限管理", path: "/auth" },
       { title: "角色管理", path: "/role" },
       { title: "人员管理", path: "/member" }
     ]
