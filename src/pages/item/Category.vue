@@ -26,13 +26,15 @@
         console.log(node);
       },
       handleEdit(id, name) {
-        console.log("edit... id: " + id + ", name: " + name)
+        console.log("李超燃正在执行修改");
+        //console.log("edit... id: " + id + ", name: " + name);
       },
       handleDelete(id) {
         console.log("delete ... " + id)
       },
       handleClick(node) {
-        console.log(node)
+        //console.log(node)
+        //console.log("别点了")
       }
     }
   };

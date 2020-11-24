@@ -23,7 +23,7 @@
         class="elevation-1"
       >
         <template slot="items" slot-scope="props">
-          <td>{{ props.item.id }}</td>
+          <td class="text-xs-left">{{ props.item.id }}</td>
           <td class="text-xs-center">{{ props.item.name }}</td>
           <td class="text-xs-center">
             <img v-if="props.item.image" :src="props.item.image" width="130" height="40">
@@ -73,7 +73,7 @@
         loading: true, // 是否在加载中
         pagination: {}, // 分页信息
         headers: [
-          {text: 'id', align: 'center', value: 'id'},
+          {text: 'id', align: 'left', value: 'id'},
           {text: '名称', align: 'center', sortable: false, value: 'name'},
           {text: 'LOGO', align: 'center', sortable: false, value: 'image'},
           {text: '首字母', align: 'center', value: 'letter', sortable: true},
