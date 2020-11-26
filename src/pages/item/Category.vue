@@ -24,6 +24,13 @@
       handleAdd(node) {
         console.log("add .... ");
         console.log(node);
+        //新增分类
+        this.$http.post('/item/category', this.$qs.stringify(node)).then(()=>{
+          this.$message.success("保存成功!");
+        }).catch(()=>{
+          this.$message.error("保存失败!");
+        })
+
       },
       handleEdit(id, name) {
         console.log("李超燃正在执行修改");
