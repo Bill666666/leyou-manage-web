@@ -32,7 +32,7 @@
           <td class="text-xs-center">{{ props.item.letter }}</td>
           <td class="justify-center layout">
             <v-btn color="info" @click="editBrand(props.item)">编辑</v-btn>
-            <v-btn color="warning">删除</v-btn>
+            <v-btn color="warning" @click="deleteBrand(props.item)">删除</v-btn>
           </td>
         </template>
       </v-data-table>
@@ -127,6 +127,18 @@
           this.oldBrand.categories = data;
         })
       },
+      deleteBrand(oldBrand){
+        //删除对应的品牌信息
+        this.$http.delete('/item/brand',{
+          params:{bid:oldBrand.id}
+        }).then(()=>{
+          this.$message.success("删除成功!");
+          //重新加载数据
+          this.getDataFromServer();
+        }).catch(()=>{
+          this.$message.error("删除失败!");
+        })
+      },
       closeWindow(){
         //关闭窗口
         this.show = false;
@@ -135,11 +147,7 @@
       },
 
       getDataFromServer() { // 从服务的加载数的方法。
-        /*this.brands = [
-          {id: 1, name: '三星', image: '123', letter: 'S'},
-          {id: 1, name: '三星', image: '123', letter: 'S'},
-          {id: 1, name: '三星', image: '321', letter: 'S'},
-        ]*/
+
         //发起请求
         this.$http.get("/item/brand/page",{
             params:{
