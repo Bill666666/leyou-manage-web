@@ -30,18 +30,26 @@
         }).catch(()=>{
           this.$message.error("保存失败!");
         })
-
       },
       handleEdit(id, name) {
-        console.log("李超燃正在执行修改");
-        //console.log("edit... id: " + id + ", name: " + name);
+        this.$http.put('/item/category',this.$qs.stringify({cid:id,name:name})).then(()=>{
+          this.$message.success("保存成功!");
+        }).catch(()=>{
+          this.$message.error("保存失败!");
+        })
       },
       handleDelete(id) {
-        console.log("delete ... " + id)
+        console.log("delete ... " + id);
+        this.$http.delete('/item/category',{
+          params:{cid:id}
+        }).then(()=>{
+          this.$message.success("删除成功!");
+        }).catch(()=>{
+          this.$message.error("删除失败!");
+        })
       },
       handleClick(node) {
-        //console.log(node)
-        //console.log("别点了")
+        console.log(node);
       }
     }
   };

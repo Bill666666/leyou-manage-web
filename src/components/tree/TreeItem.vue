@@ -177,7 +177,7 @@
         this.$nextTick(() => this.$refs[this.model.id].focus());
       },
       afterEdit() {
-        if (this.model.beginEdit) {
+        if (this.beginEdit) {
           this.beginEdit = false;
           this.handleEdit(this.model.id, this.model.name);
         }
