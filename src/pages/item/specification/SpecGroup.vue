@@ -92,7 +92,7 @@ export default {
            this.$http({
             method: this.isEdit ? 'put' : 'post',
             url: '/item/spec/group',
-            data: this.group
+            data: this.$qs.stringify(this.group)
           }).then(() => {
             // 关闭窗口
             this.show = false;
