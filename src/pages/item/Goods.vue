@@ -42,14 +42,14 @@
         <td class="text-xs-center">{{props.item.cname}}</td>
         <td class="text-xs-center">{{ props.item.bname }}</td>
         <td class="justify-center layout px-0">
-          <v-btn icon @click="editGoods(props.item)">
+          <v-btn color="info" icon @click="editGoods(props.item)">
             <i class="el-icon-edit"/>
           </v-btn>
-          <v-btn icon>
+          <v-btn color="warning" icon>
             <i class="el-icon-delete"/>
           </v-btn>
-          <v-btn icon v-if="props.item.saleable">下架</v-btn>
-          <v-btn icon v-else>上架</v-btn>
+          <v-btn color="success" icon v-if="props.item.saleable">下架</v-btn>
+          <v-btn color="success" icon v-else>上架</v-btn>
         </td>
       </template>
     </v-data-table>

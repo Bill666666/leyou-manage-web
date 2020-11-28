@@ -11,10 +11,10 @@
                     <td class="text-xs-center">{{ props.item.id }}</td>
                     <td class="text-xs-center">{{ props.item.name }}</td>
                     <td class="justify-center layout px-0">
-                    <v-btn icon @click.stop="editGroup(props.item)">
+                    <v-btn color="info" icon @click.stop="editGroup(props.item)">
                         <i class="el-icon-edit"/>
                     </v-btn>
-                    <v-btn icon @click.stop="deleteGroup(props.item.id)">
+                    <v-btn color="warning" icon @click.stop="deleteGroup(props.item.id)">
                         <i class="el-icon-delete"/>
                     </v-btn>
                     </td>
