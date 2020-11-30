@@ -61,7 +61,7 @@
         showBtn: false,
         show: false,
         dialogImageUrl: "",
-        baseUrl: config.api,
+        baseUrl: 'http://127.0.0.1:8082',
         avatarStyle: {
           width: this.picWidth + 'px',
           height: this.picHeight + 'px',
