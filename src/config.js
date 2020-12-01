@@ -1,5 +1,5 @@
 //const baseUrl = 'http://api.leyou.com'
-const baseUrl = 'http://127.0.0.1:10010'
+const baseUrl = 'http://122.112.198.158:10010'
 const config = {
   locale: 'zh-CN', // en-US, zh-CN
   url: baseUrl,
