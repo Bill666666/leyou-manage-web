@@ -23,13 +23,14 @@
     methods: {
       handleAdd(node) {
         console.log("add .... ");
-        console.log(node);
         //新增分类
-        this.$http.post('/item/category', this.$qs.stringify(node)).then(()=>{
+        this.$http.post('/item/category', this.$qs.stringify(node)).then(resp =>{
+          node.id = resp.data;
           this.$message.success("保存成功!");
-        }).catch(()=>{
+        }).catch(resp =>{
           this.$message.error("保存失败!");
         })
+
       },
       handleEdit(id, name) {
         this.$http.put('/item/category',this.$qs.stringify({cid:id,name:name})).then(()=>{

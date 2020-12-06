@@ -55,7 +55,7 @@
         })
       },
       handleAdd(node) {
-        this.$emit("handleAdd", this.copyNodeInfo(node));
+        this.$emit("handleAdd", node);
       },
       handleEdit(id, name) {
         this.$emit("handleEdit", id, name)
@@ -89,7 +89,9 @@
         return o;
       }
     },
-    watch: {}
+    watch: {
+
+    }
   }
 </script>
 
