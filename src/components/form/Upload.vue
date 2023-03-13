@@ -61,8 +61,8 @@
         showBtn: false,
         show: false,
         dialogImageUrl: "",
-        baseUrl: 'http://122.112.198.158:8082',
-        //baseUrl: 'http://127.0.0.1:8082',
+        //baseUrl: 'http://122.112.198.158:8082',
+        baseUrl: 'http://127.0.0.1:8082',
         avatarStyle: {
           width: this.picWidth + 'px',
           height: this.picHeight + 'px',
